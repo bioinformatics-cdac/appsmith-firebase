@@ -153,21 +153,6 @@
                 },
                 {
                   "key": "primaryColumns.attendence.computedValue"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.saveButtonColor"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.saveBorderRadius"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.discardBorderRadius"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.isSaveDisabled"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.isDiscardDisabled"
                 }
               ],
               "leftColumn": 0,
@@ -236,17 +221,9 @@
                 "poster",
                 "email",
                 "presenting_author",
-                "attendence",
-                "EditActions1"
+                "attendence"
               ],
-              "dynamicPropertyPathList": [
-                {
-                  "key": "primaryColumns.EditActions1.isSaveDisabled"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.isDiscardDisabled"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "displayName": "Table",
               "bottomRow": 37,
               "columnWidthMap": {
@@ -325,8 +302,8 @@
                   "enableSort": true,
                   "isVisible": false,
                   "isDisabled": false,
-                  "isCellEditable": true,
-                  "isEditable": true,
+                  "isCellEditable": false,
+                  "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "country",
@@ -887,43 +864,6 @@
                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"attendence\"]))}}",
                   "validation": {},
                   "cellBackground": ""
-                },
-                "EditActions1": {
-                  "allowCellWrapping": false,
-                  "index": 10,
-                  "width": 150,
-                  "originalId": "EditActions1",
-                  "id": "EditActions1",
-                  "alias": "EditActions1",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "editActions",
-                  "textSize": "0.875rem",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": false,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": true,
-                  "label": "Save / Discard",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "",
-                  "validation": {},
-                  "buttonStyle": "rgb(3, 179, 101)",
-                  "saveIconAlign": "left",
-                  "discardIconAlign": "left",
-                  "saveActionLabel": "Save",
-                  "discardActionLabel": "Discard",
-                  "saveButtonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                  "discardButtonColor": "#F22B2B",
-                  "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                  "discardBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                  "discardButtonVariant": "TERTIARY",
-                  "isSaveDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
-                  "isDiscardDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}"
                 }
               },
               "key": "vz498dytuu",
@@ -931,7 +871,7 @@
               "rightColumn": 57,
               "textSize": "0.875rem",
               "widgetId": "roe4npjxur",
-              "tableData": "{{get_all_documents.data}}/",
+              "tableData": "{{get_all_documents.data}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
