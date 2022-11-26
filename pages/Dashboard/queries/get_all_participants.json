@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "firestore-plugin",
   "unpublishedAction": {
-    "name": "get_all_documents",
+    "name": "get_all_participants",
     "datasource": {
       "name": "firebase",
       "pluginId": "firestore-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Page1",
+    "pageId": "Dashboard",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -71,7 +71,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_get_all_documents",
+  "id": "Dashboard_get_all_participants",
   "deleted": false,
   "gitSyncId": "637e0d898a35f35f9baeac36_637e0eed854b686e2f8d77f4"
 }

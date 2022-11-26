@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "firestore-plugin",
   "unpublishedAction": {
-    "name": "Count",
+    "name": "update_present_participant",
     "datasource": {
       "name": "firebase",
       "pluginId": "firestore-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Page1",
+    "pageId": "Dashboard",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "body": {
-          "data": ""
+          "data": "{\"attendence\": {{appsmith.store.present}}}"
         },
         "command": {
           "data": "UPDATE_DOCUMENT"
@@ -39,7 +39,7 @@
           "data": ""
         },
         "path": {
-          "data": ""
+          "data": "{{Table1.selectedRow._ref.path}}"
         },
         "prev": {
           "data": ""
@@ -61,17 +61,27 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.path.data"
+      },
+      {
+        "key": "formData.body.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Table1.selectedRow._ref.path",
+      "appsmith.store.present"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Count",
+  "id": "Dashboard_update_present_participant",
   "deleted": false,
   "gitSyncId": "637e0d898a35f35f9baeac36_6380f574d4d99c4ab3bf6458"
 }

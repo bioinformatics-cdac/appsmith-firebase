@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Page1",
-    "slug": "page1",
+    "name": "Dashboard",
+    "slug": "dashboard",
     "layouts": [
       {
         "viewMode": false,
@@ -876,7 +876,7 @@
               "rightColumn": 57,
               "textSize": "0.875rem",
               "widgetId": "roe4npjxur",
-              "tableData": "{{get_all_documents.data}}",
+              "tableData": "{{get_all_participants.data}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
@@ -971,7 +971,7 @@
               ],
               "shouldTruncate": false,
               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-              "text": "{{(()=>{\n\tvar docs  = get_all_documents.data.filter((row)=>{return row.attendence==true});\n\treturn docs.length\n})()}}",
+              "text": "{{(()=>{\n\tvar docs  = get_all_participants.data.filter((row)=>{return row.attendence==true});\n\treturn docs.length\n})()}}",
               "key": "cmic7o8oyx",
               "isDeprecated": false,
               "rightColumn": 33,
@@ -1067,7 +1067,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 378,
+                  "bottomRow": 370,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -1189,7 +1189,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "IconButton1",
-                      "onClick": "{{closeModal('Modal1')}}",
+                      "onClick": "{{closeModal('editAttandance')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Icon Button",
                       "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -1202,6 +1202,11 @@
                       "type": "ICON_BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 58,
                       "dynamicBindingPathList": [
                         {
@@ -1277,7 +1282,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1",
-                      "onClick": "{{closeModal('Modal1')}}",
+                      "onClick": "{{closeModal('editAttandance')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -1290,6 +1295,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 31,
                       "dynamicBindingPathList": [
                         {
@@ -1322,7 +1332,13 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button2",
+                      "onClick": "\nstoreValue(\"present\", presentSwitch.value);\nupdate_present_participant.run();\n{{get_all_participants.run()}}\n\ncloseModal(\"editAttandance\")\n",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -1334,6 +1350,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 47,
                       "dynamicBindingPathList": [
                         {
@@ -1343,7 +1364,7 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "Confirm",
+                      "text": "Save",
                       "isDisabled": false,
                       "key": "vjxdi7he1y",
                       "isDeprecated": false,
@@ -1465,56 +1486,54 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input1",
-                      "displayName": "Input",
-                      "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+                      "widgetName": "presentSwitch",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "defaultSwitchState"
+                        }
+                      ],
+                      "displayName": "Switch",
+                      "iconSVG": "/static/media/icon.a3115bc1c224776de2846985c8819f99.svg",
                       "searchTags": [
-                        "form",
-                        "text input",
-                        "number",
-                        "textarea"
+                        "boolean"
                       ],
                       "topRow": 17,
-                      "bottomRow": 24,
+                      "bottomRow": 21,
                       "parentRowSpace": 10,
-                      "labelWidth": 5,
-                      "autoFocus": false,
-                      "type": "INPUT_WIDGET_V2",
+                      "type": "SWITCH_WIDGET",
+                      "alignWidget": "LEFT",
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 6.9375,
-                      "dynamicTriggerPathList": [],
-                      "resetOnSubmit": true,
-                      "leftColumn": 8,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onChange"
+                        }
+                      ],
+                      "leftColumn": 4,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
                         },
                         {
-                          "key": "borderRadius"
+                          "key": "defaultSwitchState"
                         }
                       ],
-                      "labelPosition": "Top",
-                      "labelStyle": "",
-                      "inputType": "TEXT",
+                      "labelPosition": "Left",
                       "isDisabled": false,
-                      "key": "lc76qr7ovd",
-                      "labelTextSize": "0.875rem",
-                      "isRequired": false,
+                      "key": "zx58m6sitc",
                       "isDeprecated": false,
-                      "rightColumn": 28,
-                      "widgetId": "y2rukbglxz",
+                      "rightColumn": 26,
+                      "onChange": "",
+                      "widgetId": "4y849f58ny",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
-                      "label": "attedance\n",
-                      "version": 2,
+                      "label": "Present",
+                      "defaultSwitchState": "{{Table1.selectedRow.attendence}}",
+                      "version": 1,
                       "parentId": "h9sdbzrpxq",
-                      "labelAlignment": "left",
                       "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "iconAlign": "left",
-                      "defaultText": ""
+                      "isLoading": false
                     }
                   ],
                   "isDisabled": false,
@@ -1552,8 +1571,8 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Page1_get_all_documents",
-              "name": "get_all_documents",
+              "id": "Dashboard_get_all_participants",
+              "name": "get_all_participants",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -1563,14 +1582,15 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Page1",
+        "id": "Dashboard",
         "deleted": false,
         "policies": [],
         "userPermissions": []
       }
     ],
     "userPermissions": [],
-    "policies": []
+    "policies": [],
+    "isHidden": false
   },
   "deleted": false,
   "gitSyncId": "637e0d898a35f35f9baeac36_637e0d898a35f35f9baeac38"
