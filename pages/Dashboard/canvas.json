@@ -1332,7 +1332,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button2",
-                      "onClick": "{{\nconsole.log(presentSwitch.isSwitchedOn);\nstoreValue(\"present\", presentSwitch.isSwitchedOn);\nupdate_present_participant.run();\nget_all_participants.run();\ncloseModal('editAttandance');\n}}\n\n\n",
+                      "onClick": "{{\nconsole.log(presentSwitch.isSwitchedOn);\nstoreValue(\"present\", presentSwitch.isSwitchedOn);\nupdate_present_participant.run();\nsetTimeout(()=>{get_all_participants.run();},2000);\n\ncloseModal('editAttandance');\n}}\n\n\n",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
