@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 850,
+          "bottomRow": 680,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -31,7 +31,7 @@
               "borderColor": "#E0DEDE",
               "isVisibleDownload": true,
               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-              "topRow": 9,
+              "topRow": 15,
               "isSortable": true,
               "type": "TABLE_WIDGET_V2",
               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -225,7 +225,7 @@
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
-              "bottomRow": 72,
+              "bottomRow": 60,
               "columnWidthMap": {
                 "task": 245,
                 "step": 62,
@@ -944,8 +944,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 73,
-              "bottomRow": 77,
+              "topRow": 10,
+              "bottomRow": 14,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -954,7 +954,7 @@
               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "parentColumnSpace": 10.0625,
               "dynamicTriggerPathList": [],
-              "leftColumn": 17,
+              "leftColumn": 5,
               "dynamicBindingPathList": [
                 {
                   "key": "truncateButtonColor"
@@ -974,7 +974,7 @@
               "text": "{{(()=>{\n\tvar docs  = get_all_participants.data.filter((row)=>{return row.attendence==true});\n\treturn docs.length\n})()}}",
               "key": "cmic7o8oyx",
               "isDeprecated": false,
-              "rightColumn": 33,
+              "rightColumn": 8,
               "textAlign": "LEFT",
               "widgetId": "wta279znac",
               "isVisible": true,
@@ -996,8 +996,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 73,
-              "bottomRow": 77,
+              "topRow": 10,
+              "bottomRow": 14,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -1006,7 +1006,7 @@
               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "parentColumnSpace": 10.0625,
               "dynamicTriggerPathList": [],
-              "leftColumn": 1,
+              "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
                   "key": "truncateButtonColor"
@@ -1023,7 +1023,7 @@
               "text": "Present Count : \n",
               "key": "mukgllabk8",
               "isDeprecated": false,
-              "rightColumn": 17,
+              "rightColumn": 5,
               "textAlign": "LEFT",
               "widgetId": "rupu6k6cdr",
               "isVisible": true,
@@ -2836,8 +2836,8 @@
                 "visuals",
                 "visualisations"
               ],
-              "topRow": 9,
-              "bottomRow": 45,
+              "topRow": 15,
+              "bottomRow": 51,
               "parentRowSpace": 10,
               "type": "CHART_WIDGET",
               "hideCard": false,
@@ -2851,7 +2851,7 @@
               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "parentColumnSpace": 15.0625,
               "dynamicTriggerPathList": [],
-              "leftColumn": 47,
+              "leftColumn": 46,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -2918,7 +2918,7 @@
               },
               "key": "1sr6otn2ls",
               "isDeprecated": false,
-              "rightColumn": 64,
+              "rightColumn": 63,
               "widgetId": "nst6wcf13b",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
