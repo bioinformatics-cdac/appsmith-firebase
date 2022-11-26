@@ -24,7 +24,7 @@
           "data": ""
         },
         "command": {
-          "data": "GET_COLLECTION"
+          "data": "UPDATE_DOCUMENT"
         },
         "deleteKeyPath": {
           "data": ""
