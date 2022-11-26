@@ -3,6 +3,10 @@
     {
       "id": "Dashboard",
       "isDefault": true
+    },
+    {
+      "id": "Speaker Page",
+      "isDefault": false
     }
   ],
   "viewMode": false,
